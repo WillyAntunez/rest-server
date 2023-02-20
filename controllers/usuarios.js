@@ -2,11 +2,13 @@ const { response, request } = require('express');
 
 const usuariosGet = (req, res) => {
 
-    const {q, nombre, apikey} = req.query;
+    const {q, nombre = 'No name', apikey} = req.query;
 
     res.json({
         msg: 'get API - controlador',
-        q, nombre, apikey
+        q, 
+        nombre, 
+        apikey
     });
 };
 
